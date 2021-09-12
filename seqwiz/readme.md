@@ -18,7 +18,7 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
     
     See: [https://biopython.org/wiki/Download](https://biopython.org/wiki/Download )
     
-    (3). Install wxPython for GUI supports
+    **(3). Install wxPython for GUI supports**
     
     Recommended version: 4.x  
     For Windows:
@@ -33,6 +33,7 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
     >>> sudo apt-get install libsdl2-dev
     ```
     \*For other Linux distributions, please find the correct versions from: [https://extras.wxpython.org/wxPython4/extras/linux/](https://extras.wxpython.org/wxPython4/extras/linux/)
+    
     See: [https://www.wxpython.org/pages/downloads/](https://www.wxpython.org/pages/downloads/)
     
 *   ### Development and testing environments
@@ -40,11 +41,15 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
     (1). SeqWiz was developed under Windows OS:
     Windows 7 Ultimate, 64bit; Python 3.8.10; Biopython 1.79; wxPython 4.1.1
     GUI snapshot for Windows:
+    
     ![](docs/windows.png)
+    
     (2). SeqWIz was aslo tested under Ubuntu OS:
     ubuntu-20.04.2.0-desktop-amd64; Python 3.8.10; Biopython 1.79; wxPython 4.1.1
     GUI snapshot for Ubuntu:
+    
     ![](docs/ubuntu.png)
+    
 *   ### Functionalities
     
     |App name|Class|Functions|Note|
@@ -74,11 +79,16 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
     ```
     (2). GUI usage
     
-    SeqWiz also provides a GUI-to-CLI interface to run the tools.
-    Step1: Start with the index window to show the list of tools.
+    SeqWiz also provides a GUI-to-CLI interface to run the tools
+    
+    Step1: Start with the index window to show the list of tools
+    
     Step 2: Select the tool in the APP list and lanuch it
+    
     Step 3: Set the parameters as needed
+    
     Step 4: Click the "Assemble" button to check input and generate CMDs
+    
     Step 5: Click the "Run" button to stat the mission
 
 *   ### Practical examples
@@ -105,16 +115,27 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
     ./seqdbs/uniprot/MOUSE_10090/2021_03/classic/fasta/Single_mature.fasta
     ```
     (2). To predict SEPs derived from lncRNA transcripts (via GUI)
+    
     Step 1: open the index window, choose the "SepFinder" in the APP list and launch the APP
+    
     ![](docs/example2_1.png)
+    
     Step 2: choose the transcript FASTA file:
+    
     ![](docs/example2_2.png)
+    
     Step 3: Choose the parsing rule
+    
     Step 4: Choose the codon level
+    
     Step 5: click "?" to show the help pop-up for initial codon level
+    
     Step 6: click the "Assemble" to check input and generate CMDs
+    
     Step 7: click the "Run" to stat the ruuning of this mission
+    
     (3). To generat subsets and retrieving sequences
+    
     Step 1: change to the "core" directory:
     ```sh
     ./seqwiz/core/
