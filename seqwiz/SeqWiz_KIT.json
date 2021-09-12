@@ -5,7 +5,7 @@
         "description": "A modularized toolkit for next-generation protein sequence database management and analysis.",
         "developer": "Tao Zhou",
         "contact": "zhoutao@njmu.edu.cn",
-        "homepage": "https://github.com/fountao/protwiz/seqwiz/",
+        "homepage": "https://github.com/fountao/protwiz/tree/main/seqwiz",
         "license": "GNU General Public License V3.0",
         "standard": ""
     },
