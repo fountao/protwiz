@@ -39,13 +39,17 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
 *   ### Development and testing environments
     
     (1). SeqWiz was developed under Windows OS:
+    
     Windows 7 Ultimate, 64bit; Python 3.8.10; Biopython 1.79; wxPython 4.1.1
+    
     GUI snapshot for Windows:
     
     ![](docs/windows.png)
     
     (2). SeqWIz was aslo tested under Ubuntu OS:
+    
     ubuntu-20.04.2.0-desktop-amd64; Python 3.8.10; Biopython 1.79; wxPython 4.1.1
+    
     GUI snapshot for Ubuntu:
     
     ![](docs/ubuntu.png)
@@ -94,6 +98,7 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
 *   ### Practical examples
     
     (1). To create mature sequences for mouse proteins
+    
     Step 1: change to the "core" directory:
     ```sh
     ./seqwiz/core/
@@ -163,4 +168,5 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
 *   ### License
     
     This project follows the GNU General Public License (version: 3.0).
+    
     See: [https://www.gnu.org/licenses/gpl-3.0.en.html](https://www.gnu.org/licenses/gpl-3.0.en.html)
