@@ -1,0 +1,104 @@
+{
+    "appinfo": {
+        "name": "SeqConvert",
+        "version": "1.0",
+        "description": "Simple format conversion between sqpd and fasta",
+        "developer": "",
+        "contact": "",
+        "homepage": "",
+        "license": "",
+        "standard": ""
+    },
+    "gcipars": {
+        "cuiapp": "SeqConvert.py",
+        "atqctrl": "False",
+        "cmdctrl": "True",
+        "icon": "",
+        "logo": "logo.png",
+        "splash": "splash.png",
+        "help": "",
+        "wait": "",
+        "fadeio":"True",
+        "transparency":"240",
+        "interpreter":"python",
+        "sptime": "5",
+        "spmaxsz": "[480,240]",
+        "fontsz": "12",
+        "logomaxsz": "[240,120]",
+        "parasz": "[640,360]",
+        "infowidth": "400",
+        "descsz": "[380,60]",
+        "titwrap": "180",
+        "hpwrap": "240",
+        "cmdsz": "[600,72]",
+        "waitsz": "[480,96]"
+    },
+    "cuipars": {
+        "si_1": {
+            "title": "Input data file",
+            "type": "file",
+            "style": "single",
+            "flag": "posl",
+            "requirement": "yes",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Input data file (absolute path)"
+        },
+        "si_2": {
+            "title": "Conversion mode",
+            "type": "select",
+            "style": "single",
+            "flag": "-t",
+            "requirement": "yes",
+            "exclusive": "no",
+            "limitation": "fasta2sqpd|peff2sqpd|sqpd2fasta|set2fasta",
+            "default": "",
+            "help": "Conversion mode"
+        },
+        "si_3": {
+            "title": "Parse rule",
+            "type": "select",
+            "style": "single",
+            "flag": "-r",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "UniProt|Single|Vertical|Space|GI|PEFF",
+            "default": "",
+            "help": "Parse rule for fasta/peff file"
+        },
+        "si_4": {
+            "title": "Output dir",
+            "type": "folder",
+            "style": "single",
+            "flag": "-o",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Output dir"
+        },
+        "si_5": {
+            "title": "Label name",
+            "type": "string",
+            "style": "single",
+            "flag": "-l",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Label name for output file"
+        }, 
+        "si_6": {
+            "title": "Pretty print fasta format",
+            "type": "check",
+            "style": "",
+            "flag": "-p",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "false",
+            "help": "Pretty print fasta format"
+        }
+    }
+}

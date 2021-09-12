@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SeqWiz help document</title>
+<style type="text/css">
+.pycode {
+	color: #0F0;
+}
+.bold {
+	font-weight: bold;
+}
+.pydir {
+	color: #6CF;
+}
+.pycode2 {
+	color: #FC0;
+}
+</style>
+</head>
+
+<body>
+<table width="90%" border="0" align="center" cellpadding="10" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle"><h1><img src="logo.png" width="320" height="158" alt="SeqWiz LOGO" /><br />
+      SeqWiz: a modularized toolkit for next-generation protein sequence database management and analysis</h1>
+      <hr></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      <ul>
+      <li>
+        <h3>Installation</h3>
+          <p><strong>(1) . Required environments:</strong></p>
+          <p>Python 3.x, with pip and requests</p>
+          <p><strong>(2). Install Biopython for predicting physicochemical properties</strong></p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode">&gt;&gt;&gt; pip install biopython</td>
+            </tr>
+          </table>
+          <p>*Recommended version:  1.7.x</p>
+          <p>See: <a href="https://biopython.org/wiki/Download ">https://biopython.org/wiki/Download </a></p>
+          <p class="bold">(3). Install wxPython for GUI supports</p>
+         </h4>Recommended version: 4.x<br>
+         For  Windows:
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode">&gt;&gt;&gt; pip install -U wxPython</td>
+            </tr>
+          </table>
+          <p>For Ubuntu 20.04:</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode"><p>&gt;&gt;&gt; pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04      wxPython</p>
+              <p class="pycode2">#for libsdl supports, if needed</p>
+              <p class="pycode2">&gt;&gt;&gt; sudo apt-get install libsdl2-2.0<br />
+              &gt;&gt;&gt; sudo apt-get install libsdl2-dev</p></td>
+            </tr>
+          </table>
+          <p>*For other Linux distributions, please find the correct versions from: <a href="https://extras.wxpython.org/wxPython4/extras/linux/">https://extras.wxpython.org/wxPython4/extras/linux/</a></p>
+          <p>See: <a href="https://www.wxpython.org/pages/downloads/">https://www.wxpython.org/pages/downloads/</a></p>
+        </li>
+        <li>
+          <h3><span class="bold">Development and testing environments</span></h3>
+          <p>(1). SeqWiz was developed under Windows OS:</p>
+          <p>Windows 7 Ultimate, 64bit; Python 3.8.10; Biopython 1.79; wxPython 4.1.1</p>
+          <p>GUI snapshot for Windows:</p>
+          <table width="75%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="windows.png" width="687" height="584" /></td>
+            </tr>
+          </table>
+          <p>(2).  SeqWIz was aslo tested under Ubuntu OS:</p>
+          <p>ubuntu-20.04.2.0-desktop-amd64; Python 3.8.10; Biopython 1.79; wxPython 4.1.1</p>
+          <p>GUI snapshot for Ubuntu:</p>
+          <table width="75%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="ubuntu.png" width="705" height="648" /></td>
+            </tr>
+          </table>
+          <p>&nbsp;</p>
+        </li>
+        <li>
+          <h3>Functionalities</h3>
+          <table width="90%" border="1" cellspacing="0" cellpadding="5">
+            <tr class="bold">
+              <td width="20%" align="center" valign="middle">App name</td>
+              <td width="13%" align="center" valign="middle">Class</td>
+              <td width="48%" align="center" valign="middle">Functions</td>
+              <td width="19%" align="center" valign="middle">Note</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>UpSpecies</p></td>
+              <td align="center" valign="middle">Core</td>
+              <td align="center" valign="middle">Search or view taxonomy ID</td>
+              <td align="center" valign="middle">Based on UniProt</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>UpRetrieval</p></td>
+              <td align="center" valign="middle">Core</td>
+              <td align="center" valign="middle">Download species specific sequences and annotations, create structured database</td>
+              <td align="center" valign="middle">Based on UniProt</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>UpConvert</p></td>
+              <td align="center" valign="middle">Core</td>
+              <td align="center" valign="middle">Convert FASTA from UniProt to PEFF or SQPD</td>
+              <td align="center" valign="middle">Based on UniProt</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>CheckSeq</p></td>
+              <td align="center" valign="middle">Core</td>
+              <td align="center" valign="middle">Check the format of FASTA, PEFF, SQPD, SET or PEPLIS</td>
+              <td align="center" valign="middle">*PEPLIS: a list of peptide sequence</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>DbManage</p></td>
+              <td align="center" valign="middle">Core</td>
+              <td align="center" valign="middle">Create structured database from non-UniProt sequences</td>
+              <td align="center" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>SeqConvert</p></td>
+              <td align="center" valign="middle">Core</td>
+              <td align="center" valign="middle">Simple format converter for non-UniProt sequences</td>
+              <td align="center" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>SeqFilter</p></td>
+              <td align="center" valign="middle">Core</td>
+              <td align="center" valign="middle">Sequence filter to generate a SET list from SQPD</td>
+              <td align="center" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>SeqDecoy</p></td>
+              <td align="center" valign="middle">Core</td>
+              <td align="center" valign="middle">Generate decoy FASTA sequences</td>
+              <td align="center" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>MatureSeq</p></td>
+              <td align="center" valign="middle">Core</td>
+              <td align="center" valign="middle">Generate mature forms of protein sequences</td>
+              <td align="center" valign="middle">Based on UniProt annotations</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>SepFinder</p></td>
+              <td align="center" valign="middle">Core</td>
+              <td align="center" valign="middle">Predict sORF and SEPs from transcript sequences</td>
+              <td align="center" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>SeqAnnotate</p></td>
+              <td align="center" valign="middle">Additional</td>
+              <td align="center" valign="middle">Sequence statistics for singular or grouped residues; calculation or prediciton of physicochemical properties, including: isoelectric  point, physilogical charge, reduced molar extinction, cystines molar extinction,  aromaticity, instability and grand average of hydropathy.</td>
+              <td align="center" valign="middle">*Require the biopython package</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>TabFilter&#13;</p></td>
+              <td align="center" valign="middle">Additional</td>
+              <td align="center" valign="middle">Table filter to generate a SET list </td>
+              <td align="center" valign="middle">*Recommend to use the result table from SeqAnnotate</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>MotifCount</p></td>
+              <td align="center" valign="middle">Additional</td>
+              <td align="center" valign="middle">Motif count</td>
+              <td align="center" valign="middle">&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle"><p>SeqWindow</p></td>
+              <td align="center" valign="middle">Additional</td>
+              <td align="center" valign="middle">Sequence window extraction from a position table (for a list of sites or peptides)</td>
+              <td align="center" valign="middle">&nbsp;</td>
+            </tr>
+          </table>
+          <p>&nbsp;</p>
+
+        </li>
+        </li>
+      <li><h3>Usage</h3>
+          <p class="bold">(1). CMD usage</p>
+          <p>Each tool of SeqWiz is designed with standard CLI interface, with self-describing arguments. Use the common &quot;-h&quot; flag to show the help in CLI:</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pydir">python {script_name}.py -h</td>
+            </tr>
+          </table>
+          <br>
+          <span class="bold">Reference usages:</span>
+          <table width="100%" border="0" cellspacing="0" cellpadding="10">
+            <tr>
+              <td><p>(1). UpSpecies</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#update species data</p>
+                      <p>&gt;&gt;&gt; python UpSpecies.py -m update</p>
+                      <p>#search for Human taxonomy ID</p>
+                      <p>&gt;&gt;&gt; python UpSpecies.py -m search -s Human -k E</p>
+                      <p>#view species data</p>
+                      <p>&gt;&gt;&gt; python UpSpecies.py -m view</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(2). UpRetrieval</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#Browse UniProtKB column name for the usage of --addfts</p>
+                    <p>&gt;&gt;&gt; python UpRetrieval.py -b</p>
+                    <p>#download FASTA sequences and features table from UniProt for HUMAN_9606, also generate SQPD and properties files (calls UpConvert.py and SeqAnnotate.py)</p>
+                    <p>&gt;&gt;&gt; python UpRetrieval.py -t 9606 -s -a</p>
+                    <p>#download reference proteome from UniProt for MOUSE_10090</p>
+                    <p>&gt;&gt;&gt; python UpRetrieval.py -t 10090 -r</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(3). UpConvert</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#create PEFF and SQPD files for download FASTA (using UpRetrieval.py)</p>
+                    <p>&gt;&gt;&gt; python UpConvert.py {ipfi: input FASTA file} -o all</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(4).CheckSeq</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#check parsing rule</p>
+                    <p>&gt;&gt;&gt; python CheckSeq.py {ipfi: input PEFF file} -t peff -r PEFF</p>
+                    <p>#check sqpd database</p>
+                    <p>python CheckSeq.py  {ipfi: input sqpd file} -t sqpd -s</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(5). DbManage</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#create a database for contaminants based on a customized FASTA file, and convert to SQPD</p>
+                    <p>&gt;&gt;&gt; python DbManage.py contaminants lab_2021 -m create -i {ipfi: input file} -f fasta -r Space -c -s</p>
+                    <p>#create a database for predicted SEPs based on a FASTA file (may be created by SepFinder), convert to SQPD and also generate annotation table</p>
+                    <p>&gt;&gt;&gt; python DbManage.py mouse_SEPs lncRNA_2021 -m create -i {ipfi: input file} -f fasta -r Single -c -s -a</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(6). SeqConvert</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#convert FASTA file (as prepared by DbManage) to simple SQPD database</p>
+                    <p>&gt;&gt;&gt; python SeqConvert.py {ipfi: input file} -t fasta2sqpd</p>
+                    <p># extract FASTA sequences from SQPD based on a SET</p>
+                    <p>&gt;&gt;&gt; python SeqConvert.py (ipfi: input file) -t set2fasta -o {odir: output dir}</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(7). SeqFilter</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#show avaliable feature names</p>
+                    <p>&gt;&gt;&gt; python SeqFilter.py {dbfi: database file} -s</p>
+                    <p>#filter sequence by fragment annotation, note: there are &quot;fragment&quot; and &quot;fragments&quot; annotations from UniProt</p>
+                    <p>&gt;&gt;&gt; python SeqFilter.py {dbfi: database file} -f Fragment -t pattern -e fragment</p>
+                    <p>#filter sequence by a motif of NX(X≠P)S/T/C/V (possible N-linked glycosylation sequence)</p>
+                    <p>&gt;&gt;&gt; python SeqFilter.py {dbfi: database file} -f sequence -t pattern -e &quot;N[^P][S|T|C|V]&quot;  -l nglyco</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(8). SeqDecoy</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#create decoy FASTA file for a SQPD</p>
+                    <p>&gt;&gt;&gt; python SeqDecoy.py{dbfi: database file} -t sqpd</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(9). MatureSeq</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#generate mature sequences (also include the Full-length sequences) from a SQPD</p>
+                    <p>&gt;&gt;&gt; python MatureSeq.py {dbfi: database file} -f</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(10). SepFinder</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#predict sORF and SEP sequences (using canonical and near-cognate codons, with ambiguous codon ) based on a fasta file of lncRNA trascript sequences, &quot;Space&quot; indicates that the header of the FASTA  is space separated for extracting a unique ID</p>
+                    <p>&gt;&gt;&gt; python SepFinder.py {ipfi: input sqpd file} -r Space  -i N -a </p>
+                    <p>#predict sORF and SEP sequences (using only canonical codons) based on a fasta file of lncRNA trascript sequences</p>
+                    <p>&gt;&gt;&gt; python SepFinder.py {ipfi: input sqpd file} -r Space  -i C -a -l canonical</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(11). SeqAnnotate</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#sequence annotation of a SQPD database</p>
+                    <p>&gt;&gt;&gt; python SeqAnnotate.py {ipfi: input file} -t sqpd</p>
+                    <p>#sequence annotation of a list of peptide (peplis should only contains peptides without a title row)</p>
+                    <p>&gt;&gt;&gt; python SeqAnnotate.py  {ipfi: input file} -t  peplis -o {odir: output path}</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(12). TabFilter</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#select small protein entries in properties.tsv table as calculated by SeqAnnotate.py, </p>
+                      &gt;&gt;&gt; python TabFilter.py {tbfi: table file} -c 2 -e &quot;[10,200]&quot; -t numeric -n &quot;[min,max]&quot; -l small</td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(13). MotifCount</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#counting the canonical motifs of cAMP-dependent protein kinase, using a list of input motif pattern </p>
+                    <p>&gt;&gt;&gt; python MotifCount.py {dbfi: database file} -t sqpd -p &quot;RR.S.&quot; &quot;R.S.&quot; &quot;KR..S.&quot;</p>
+                    <p>#counting motifs based on a list of motif </p>
+                    <p>&gt;&gt;&gt; python MotifCount.py {dbfi: database file} -t sqpd -m (a file with a list of motif)</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><p>(14). SeqWindow</p>
+                <table width="75%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#333333" class="pydir"><p>#extract sequence window for modified sites (START=END in position table), the position table file must contain a title row</p>
+                    <p>&gt;&gt;&gt; python SeqWindow.py {dbfi: database file} {pofi: position table -l site</p>
+                    <p>#extract sequence window for peptide</p>
+                    <p>python SeqWindow.py {dbfi: database file} {pofi: position table file} -l pep</p></td>
+                  </tr>
+              </table></td>
+            </tr>
+          </table>
+          <br>
+        <p class="bold">(2). GUI usage</p>
+        <p>SeqWiz also provides a GUI-to-CLI interface to run the tools. </p>
+        <p>Step1: Start with the index window to show the list of tools.</p>
+        <p>Step 2: Select the tool in the APP list and lanuch it</p>
+        <p>Step 3: Set the parameters as needed</p>
+        <p>Step 4: Click the &quot;Assemble&quot; button to check input and generate CMDs </p>
+        <p>Step 5: Click the &quot;Run&quot; button to stat the mission</p>
+      </li>
+        <li>
+          <h3>Practical examples</h3>
+          <p class="bold">(1). To create mature sequences  for mouse proteins</p>
+          <p>Step 1: change to the &quot;core&quot; directory:</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode"><span class="pydir">./seqwiz/core/</span></td>
+            </tr>
+          </table>
+          <p>Step 2: find the taxonomy ID</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode">&gt;&gt;&gt; python UpSpecies.py -m search -s Mouse -k E
+</td>
+            </tr>
+          </table>
+          <p>Step 3: download sequences and annotations</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode">&gt;&gt;&gt; python UpRetrieval.py -t 10090 -s -a
+ </td>
+            </tr>
+          </table>
+          <p>Step 4: generate mature sequences in FASTA format</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode">&gt;&gt;&gt; python MatureSeq.py ../seqdbs/Uniprot/MOUSE_10090/2021_03/next/sqpd/SQPD.db -f
+ </td>
+            </tr>
+          </table>
+          <p>Step 5: check the result file</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode"><span class="pydir">./seqdbs/uniprot/MOUSE_10090/2021_03/classic/fasta/Single_mature.fasta
+</span></td>
+            </tr>
+          </table>
+          <p>&nbsp;</p>
+          <p class="bold">(2). To predict SEPs derived  from lncRNA transcripts (via GUI)</p>
+          <p>Step 1: open the index window, choose the &quot;SepFinder&quot; in the APP list and launch the APP</p>
+          <table width="75%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="example2_1.png" width="687" height="584" /></td>
+            </tr>
+          </table>
+          <p>Step 2: choose the transcript FASTA file:</p>
+          <table width="75%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="example2_2.png" width="706" height="691" /></td>
+            </tr>
+          </table>
+          <p>Step 3: Choose the parsing rule</p>
+          <p>Step 4: Choose the codon level </p>
+          <p>Step 5: click &quot;?&quot; to show the help pop-up for initial codon level</p>
+          <p>Step 6: click the &quot;Assemble&quot; to check input and generate CMDs</p>
+          <p>Step 7: click the &quot;Run&quot; to stat the ruuning of this mission</p>
+          <p class="bold">(3).  To generat subsets and retrieving sequences</p>
+          <p>Step 1: change to the &quot;core&quot; directory:</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode"><span class="pydir">./seqwiz/core/</span></td>
+            </tr>
+          </table>
+          <p>Step 2: generate a SET of reference proteome</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode">&gt;&gt;&gt; python SeqFilter.py ../seqdbs/uniprot/MOUSE_10090/2021_03/next/sqpd/SQPD.db -f Proteomes -e " " -t exact -l proteome -m remove
+</td>
+            </tr>
+          </table>
+          <p>Step 3: generate a SET of small proteins, based on reference proteome
+</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode">&gt;&gt;&gt; python ../adds/TabFilter.py ../seqdbs/uniprot/MOUSE_10090/2021_03/classic/table/properties.tsv -c 2 -l small -e  &ldquo;&lt;200&rdquo; -t numeric -n &ldquo;&lt;max&rdquo; -i intersection 
+ -r  ../seqdbs/uniprot/MOUSE_10090/2021_03/next/sets/SQPD_filter_proteome.json</td>
+            </tr>
+          </table>
+          <p>Step 4: generate a SET of sequences with a speific  motif, based on small SET</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode">&gt;&gt;&gt; python SeqFilter.py ../seqdbs/uniprot/MOUSE_10090/2021_03/next/sqpd/SQPD.db -f sequence -e "N[^P][S|T|C|V]" -t pattern  -i intersection -r -l motif ../seqdbs/uniprot/MOUSE_10090/2021_03/next/sets/properties_filter_small.json
+</td>
+            </tr>
+          </table>
+          <p>Step 5: convert all of the SETs into classic FASTA files</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode"><p>&gt;&gt;&gt; python SeqConvert.py  ../seqdbs/uniprot/MOUSE_10090/2021_03/next/sets/SQPD_filter_proteome.json -t set2fasta -l proteome </p>
+              <p>&gt;&gt;&gt; python SeqConvert.py  ../seqdbs/uniprot/MOUSE_10090/2021_03/next/sets/properties_filter_small.json -t set2fasta -l small </p>
+              <p>&gt;&gt;&gt; python SeqConvert.py  ../seqdbs/uniprot/MOUSE_10090/2021_03/next/sets/SQPD_filter_motif.json -t set2fasta -l motif</p></td>
+            </tr>
+          </table>
+          <p>&nbsp;</p>
+        </li>
+      <li>
+        <h3>License</h3>
+          <p>This project follows the GNU General Public License (version: 3.0).</p>
+          <p>See: <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">https://www.gnu.org/licenses/gpl-3.0.en.html</a></p>
+        </li>
+      </ul>
+    <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

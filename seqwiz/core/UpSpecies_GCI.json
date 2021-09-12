@@ -1,0 +1,71 @@
+{
+    "appinfo": {
+        "name": "UpSpecies",
+        "version": "1.0",
+        "description": "Speies information management, based on UniProtKB",
+        "developer": "",
+        "contact": "",
+        "homepage": "",
+        "license": "",
+        "standard": ""
+    },
+    "gcipars": {
+        "cuiapp": "UpSpecies.py",
+        "atqctrl": "False",
+        "cmdctrl": "True",
+        "icon": "",
+        "logo": "logo.png",
+        "splash": "splash.png",
+        "help": "",
+        "wait": "",
+        "fadeio":"True",
+        "transparency":"240",
+        "interpreter":"python",
+        "sptime": "5",
+        "spmaxsz": "[480,240]",
+        "fontsz": "12",
+        "logomaxsz": "[240,120]",
+        "parasz": "[640,360]",
+        "infowidth": "400",
+        "descsz": "[380,60]",
+        "titwrap": "180",
+        "hpwrap": "240",
+        "cmdsz": "[600,72]",
+        "waitsz": "[480,96]"
+    },
+    "cuipars": {
+        "si_1": {
+            "title": "Management type",
+            "type": "select",
+            "style": "single",
+            "flag": "-m",
+            "requirement": "yes",
+            "exclusive": "no",
+            "limitation": "update|search|view",
+            "default": "",
+            "help": "Action type for management"
+        },
+        "si_2": {
+            "title": "Search keyword",
+            "type": "string",
+            "style": "single",
+            "flag": "-s",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Keyword for search action"
+        },
+        "si_3": {
+            "title": "Taxomomic kingdom",
+            "type": "select",
+            "style": "single",
+            "flag": "-k",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "A|B|E|V|O",
+            "default": "",
+            "help": "Taxonomic kingdom for searching a species: A=archaebacteria, B=prokaryota or eubacteria, E=eukarya, V=viridae, O=others"
+        }
+    }
+}

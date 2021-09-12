@@ -1,0 +1,148 @@
+{
+    "appinfo": {
+        "name": "SeqFilter",
+        "version": "1.0",
+        "description": "Sequence filter based on SQPD database",
+        "developer": "",
+        "contact": "",
+        "homepage": "",
+        "license": "",
+        "standard": ""
+    },
+    "gcipars": {
+        "cuiapp": "SeqFilter.py",
+        "atqctrl": "False",
+        "cmdctrl": "True",
+        "icon": "",
+        "logo": "logo.png",
+        "splash": "splash.png",
+        "help": "",
+        "wait": "",
+        "fadeio":"True",
+        "transparency":"240",
+        "interpreter":"python",
+        "sptime": "5",
+        "spmaxsz": "[480,240]",
+        "fontsz": "12",
+        "logomaxsz": "[240,120]",
+        "parasz": "[640,360]",
+        "infowidth": "400",
+        "descsz": "[380,60]",
+        "titwrap": "180",
+        "hpwrap": "240",
+        "cmdsz": "[600,72]",
+        "waitsz": "[480,96]"
+    },
+    "cuipars": {
+        "si_1": {
+            "title": "Database file",
+            "type": "file",
+            "style": "single",
+            "flag": "posl",
+            "requirement": "yes",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Database file (absolute path), must be in pre-defined directory of SeqDBs"
+        },
+        "si_2": {
+            "title": "Show feature list",
+            "type": "check",
+            "style": "",
+            "flag": "-s",
+            "requirement": "yes",
+            "exclusive": "yes",
+            "limitation": "",
+            "default": "false",
+            "help": "Show feature list (in sequence and feature table)"
+        },
+        "si_3": {
+            "title": "Feature name",
+            "type": "check",
+            "style": "",
+            "flag": "-f",
+            "requirement": "yes",
+            "exclusive": "yes",
+            "limitation": "",
+            "default": "false",
+            "help": "Feature name for filter"
+        },
+        "si_4": {
+            "title": "Label name",
+            "type": "string",
+            "style": "single",
+            "flag": "-l",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Label name for output file"
+        }, 
+        "si_5": {
+            "title": "Expression condition for filtering",
+            "type": "string",
+            "style": "single",
+            "flag": "-e",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Expression string/condition for filtering"
+        },
+        "si_6": {
+            "title": "Condition type",
+            "type": "select",
+            "style": "single",
+            "flag": "-t",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "exact|pattern|numeric",
+            "default": "",
+            "help": "Parse rule for fasta/peff file"
+        },
+        "si_7": {
+            "title": "Template class for numerical condition",
+            "type": "select",
+            "style": "single",
+            "flag": "-n",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "(min,max)|[min,max]|(min,max]|[min,max)|<=max|>=min|<max|>min|!=val|=val",
+            "default": "",
+            "help": "Template class for numerical condition"
+        },
+        "si_8": {
+            "title": "Filter mode",
+            "type": "select",
+            "style": "single",
+            "flag": "-m",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "select|remove",
+            "default": "select",
+            "help": "Filter mode [default: select]"
+        },
+        "si_9": {
+            "title": "Reference set file",
+            "type": "file",
+            "style": "single",
+            "flag": "-r",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Reference entries list for multiple selection"
+        },
+        "si_10": {
+            "title": "Integration mode",
+            "type": "select",
+            "style": "single",
+            "flag": "-i",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "union|intersection|complement",
+            "default": "",
+            "help": "Integration mode for multiple selection, based on reference set"
+        }
+    }
+}
