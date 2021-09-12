@@ -1,4 +1,4 @@
-![SeqWiz LOGO](logo.png)  
+![SeqWiz LOGO](docs/logo.png)  
 SeqWiz: a modularized toolkit for next-generation protein sequence database management and analysis
 * * *
 
@@ -40,11 +40,11 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
     (1). SeqWiz was developed under Windows OS:
     Windows 7 Ultimate, 64bit; Python 3.8.10; Biopython 1.79; wxPython 4.1.1
     GUI snapshot for Windows:
-    ![](windows.png)
+    ![](docs/windows.png)
     (2). SeqWIz was aslo tested under Ubuntu OS:
     ubuntu-20.04.2.0-desktop-amd64; Python 3.8.10; Biopython 1.79; wxPython 4.1.1
     GUI snapshot for Ubuntu:
-    ![](ubuntu.png)
+    ![](docs/ubuntu.png)
 *   ### Functionalities
     
     |App name|Class|Functions|Note|
@@ -106,9 +106,9 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
     ```
     (2). To predict SEPs derived from lncRNA transcripts (via GUI)
     Step 1: open the index window, choose the "SepFinder" in the APP list and launch the APP
-    ![](example2_1.png)
+    ![](docs/example2_1.png)
     Step 2: choose the transcript FASTA file:
-    ![](example2_2.png)
+    ![](docs/example2_2.png)
     Step 3: Choose the parsing rule
     Step 4: Choose the codon level
     Step 5: click "?" to show the help pop-up for initial codon level
@@ -125,7 +125,7 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
     ```
     Step 3: generate a SET of small proteins, based on reference proteome
     ```sh
-    >>> python ../adds/TabFilter.py ../seqdbs/uniprot/MOUSE_10090/2021_03/classic/table/properties.tsv -c 2 -l small -e ¡°<200¡± -t numeric -n ¡°<max¡± -i intersection -r ../seqdbs/uniprot/MOUSE_10090/2021_03/next/sets/SQPD_filter_proteome.json
+    >>> python ../adds/TabFilter.py ../seqdbs/uniprot/MOUSE_10090/2021_03/classic/table/properties.tsv -c 2 -l small -e Â¡Â°<200Â¡Â± -t numeric -n Â¡Â°<maxÂ¡Â± -i intersection -r ../seqdbs/uniprot/MOUSE_10090/2021_03/next/sets/SQPD_filter_proteome.json
     ```
     Step 4: generate a SET of sequences with a speific motif, based on small SET
     ```sh
