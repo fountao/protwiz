@@ -10,7 +10,7 @@
         "standard": ""
     },
     "gcipars": {
-        "cuiapp": "UpRetrieval.py",
+        "cuiapp": "DbManage.py",
         "atqctrl": "False",
         "cmdctrl": "True",
         "icon": "",
