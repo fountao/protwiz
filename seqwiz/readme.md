@@ -1,4 +1,4 @@
-﻿![SeqWiz LOGO](default_gci_logo.png)  
+﻿![SeqWiz LOGO](dft_gci_logo.png)  
 SeqWiz: a modularized toolkit for next-generation protein sequence database management and analysis
 * * *
 
