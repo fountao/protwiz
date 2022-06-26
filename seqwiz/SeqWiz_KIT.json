@@ -1,0 +1,48 @@
+{
+    "kitinfo": {
+        "name": "SeqWiz toolkit",
+        "version": "1.0",
+        "description": "A modularized toolkit for next-generation protein sequence database management and analysis.",
+        "developer": "Tao Zhou",
+        "contact": "zhoutao@njmu.edu.cn",
+        "homepage": "https://github.com/fountao/protwiz/tree/main/seqwiz",
+        "license": "GNU General Public License V3.0",
+        "standard": ""
+    },
+    "gkipars": {
+        "gcictor": "GCI_ctor.pyw",
+        "icon": "",
+        "logo": "logo.png",
+        "splash": "splash.png",
+        "help": "docs/help.html",
+        "fadeio":"True",
+        "transparency":"235",
+        "interpreter":"python",
+        "sptime": "5",
+        "spmaxsz": "[480,240]",
+        "fontsz": "12",
+        "logomaxsz": "[240,120]",
+        "infowidth": "400",
+        "descsz": "[380,60]"
+    },
+    "cuilist": [
+    "tools/sequence_retrieval/UpSpecies_GCI.json",
+    "tools/sequence_retrieval/UpRetrieval_GCI.json",
+    "tools/sequence_retrieval/NCBISpecies_GCI.json",
+    "tools/sequence_retrieval/NCBIRetrieval_GCI.json",
+    "tools/sequence_retrieval/EnsemblSpecies_GCI.json",
+    "tools/sequence_retrieval/EnsemblRetrieval_GCI.json",
+    "tools/sequence_retrieval/DbManage_GCI.json",
+    "tools/sequence_generation/MatureSeq_GCI.json",
+    "tools/sequence_generation/SepFinder_GCI.json",
+    "tools/sequence_generation/SeqDecoy_GCI.json",
+    "tools/sequence_conversion/CheckSeq_GCI.json",
+    "tools/sequence_conversion/UpConvert_GCI.json",
+    "tools/sequence_conversion/SeqConvert_GCI.json",
+    "tools/sequence_filter/SeqFilter_GCI.json",
+    "tools/sequence_filter/TabFilter_GCI.json",
+    "tools/sequence_analysis/SeqAnnotate_GCI.json",
+    "tools/sequence_analysis/MotifCount_GCI.json",
+    "tools/sequence_analysis/SeqWindow_GCI.json"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+	"Properties": {
+		"Chemistry": {
+			"NonpolarHydrophobic": "PWGAMFLVI",
+			"PolarAcidic": "DE",
+			"PolarBasic": "RKH",
+			"PolarNeutral": "NQYSTC"
+		}
+	}
+}

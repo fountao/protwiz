@@ -1,0 +1,277 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SeqWiz help document</title>
+<style type="text/css">
+.pycode {
+	color: #0F0;
+}
+.bold {
+	font-weight: bold;
+}
+.pydir {
+	color: #6CF;
+}
+.pycode2 {
+	color: #FC0;
+}
+table{;}
+
+td{word-break: break-all; word-wrap:break-word;}
+</style>
+</head>
+
+<body>
+<table width="90%" border="0" align="center" cellpadding="10" cellspacing="0">
+  <tr>
+    <td align="center" valign="middle"><h1><img src="../dft_gci_wait.gif" width="120" height="120" alt="SeqWiz LOGO" /><br />
+      SeqWiz: a modularized toolkit for next-generation protein sequence database management and analysis</h1>
+      <hr></td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      <ul>
+      <li>
+        <h3>Installation</h3>
+          <p><strong>(1) . Required environments:</strong></p>
+          <p>Python 3.x, with pip and requests</p>
+          <p><strong>(2). Install Requests for internet support</strong></p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode">&gt;&gt;&gt; pip install requests</td>
+            </tr>
+          </table>
+          <p>*Recommended version:  2.x</p>
+          <p><strong>(3). Install Biopython for predicting physicochemical properties</strong></p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode">&gt;&gt;&gt; pip install biopython</td>
+            </tr>
+          </table>
+          <p>*Recommended version:  1.7.x</p>
+          <p>See: <a href="https://biopython.org/wiki/Download ">https://biopython.org/wiki/Download </a></p>
+          <p class="bold">(4). Install wxPython for GUI supports</p>
+         </h4>Recommended version: 4.x<br>
+         For  Windows:
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode">&gt;&gt;&gt; pip install -U wxPython</td>
+            </tr>
+          </table>
+          <p>For Ubuntu 20.04:</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pycode"><p>&gt;&gt;&gt; pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-20.04      wxPython</p>
+              <p class="pycode2">#for libsdl supports, if needed</p>
+              <p class="pycode2">&gt;&gt;&gt; sudo apt-get install libsdl2-2.0<br />
+              &gt;&gt;&gt; sudo apt-get install libsdl2-dev</p></td>
+            </tr>
+          </table>
+          <p>*For other Linux distributions, please find the correct versions from: <a href="https://extras.wxpython.org/wxPython4/extras/linux/">https://extras.wxpython.org/wxPython4/extras/linux/</a></p>
+          <p>See: <a href="https://www.wxpython.org/pages/downloads/">https://www.wxpython.org/pages/downloads/</a></p>
+        </li>
+        <li>
+          <h3><span class="bold">Development and testing environments</span></h3>
+          <p>(1). SeqWiz was developed under Windows OS:</p>
+          <p>Windows 10, 64bit; Python 3.9.5; requests 2.27.1; Biopython 1.79; wxPython 4.1.1</p>
+          <p>GUI snapshot for Windows:</p>
+          <table width="75%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="snapshots/OS/windows10.png" width="561" height="607" /></td>
+            </tr>
+          </table>
+          <p>(2).  SeqWIz was aslo tested under Ubuntu  and Debian:</p>
+          <p>GUI snapshot for Ubuntu (20.04):</p>
+          <table width="75%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="snapshots/OS/ubuntu20.04.png" width="678" height="666" /></td>
+            </tr>
+          </table>
+          <p>GUI snapshot for Debian (11):</p>
+          <table width="75%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td><img src="snapshots/OS/debian11.png" width="686" height="666" /></td>
+            </tr>
+          </table>
+        </li>
+        <li>
+          <h3>Functionalities</h3>
+          Standalone tools are available in the directory of &quot;tools&quot; and classified into five categories:<br />
+          <table width="90%" border="1">
+            <tr>
+              <td><table border="1" cellspacing="0" cellpadding="0" >
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Category</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p><strong>Tool name</strong></p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p><strong>Functions</strong></p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p><strong>Note</strong></p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Retrieval</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>UpSpecies</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Search or view taxonomy ID</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>Based on UniProt</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Retrieval</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>UpRetrieval</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Download    species specific sequences and annotations, <br>
+                    create structured database</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>Based    on UniProt, support full annotations, <br>
+                    options to create SQPD and perform    features prediction</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Retrieval</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>NCBISpecies</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Search or view taxonomy ID</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>Based on NCBI</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Retrieval</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>NCBIRetrieval</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Download    species specific sequences</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>Based    on NCBI, options to create SQPD and perform<br>
+features prediction</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Retrieval</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>EnsemblSpecies</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Search or view taxonomy ID</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>Based on Ensembl</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Retrieval</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>EnsemblRetrieval</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Download    species specific sequences</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>Based    on Ensembl, options to create SQPD and perform<br>
+features prediction</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Retrieval</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p><a name="OLE_LINK6" id="OLE_LINK6">DbManage</a></p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Create structured database from    other sequence sources</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p> </p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Generation</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>MatureSeq</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Generate    mature forms of protein sequences</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>Based    on UniProt annotations</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Generation</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>SepFinder</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Predict sORF and SEPs from    transcript sequences</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>Supports both liner and circular    RNAs</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Generation</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>SeqDecoy</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Generate    decoy FASTA sequences</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p> </p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Conversion</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>CheckSeq</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Check the format of FASTA, PEFF,    SQPD, SET or PEPLIS</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>*PEPLIS: a list of peptide    sequence</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Conversion</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p><a name="OLE_LINK8" id="OLE_LINK8">UpConvert</a></p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Convert    FASTA from UniProt to PEFF or SQPD</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>Based    on UniProt, support full annotations</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Conversion</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p><a name="OLE_LINK10" id="OLE_LINK10">SeqConvert</a></p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Simple format converter for    non-UniProt sequences, from FASTA to </p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p> </p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Filter</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>SeqFilter</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Sequence    filter to generate a SET list from SQPD</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p> </p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Filter</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>TabFilter</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Table filter to generate a SET    list</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>*Recommend to use the result table    from SeqAnnotate</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Analysis</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>SeqAnnotate</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Sequence    statistics for singular or grouped residues; <br>
+                    calculation or prediction of    physicochemical properties, <br>
+                    including: isoelectric point, physiological    charge, reduced<br>
+molar extinction, cystines molar extinction, aromaticity,<br>
+instability and grand average of hydropathy.</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p>*Require    the biopython package</p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Analysis</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>MotifCount</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Motif statistic for sequence files</p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p> </p></td>
+                </tr>
+                <tr>
+                  <td width="13%" nowrap="nowrap" valign="top"><p><strong>Sequence Analysis</strong></p></td>
+                  <td width="18%" nowrap="nowrap" valign="top"><p>SeqWindow</p></td>
+                  <td width="41%" nowrap="nowrap" valign="top"><p>Sequence    window extraction from a<br>
+position table (for a list of sites or peptides) </p></td>
+                  <td width="26%" nowrap="nowrap" valign="top"><p> </p></td>
+                </tr>
+              </table></td>
+            </tr>
+          </table>
+          <p>&nbsp;</p></li><li><h3>Usage</h3>
+          <p class="bold">(1). CMD usage</p>
+          <p>Each tool of SeqWiz is designed with standard CLI interface, with self-describing arguments. Use the common &quot;-h&quot; flag to show the help in CLI:</p>
+          <table width="75%" border="0" cellspacing="0" cellpadding="5">
+            <tr>
+              <td bgcolor="#333333" class="pydir">python {script_name}.py -h</td>
+            </tr>
+          </table>
+          <br>
+          <span class="bold">Reference usages:</span><br>
+        <p class="bold">(2). GUI usage</p>
+        <p>SeqWiz also provides a GUI-to-CLI interface to run the tools. </p>
+        <p>Step1: Start with the index window to show the list of tools.</p>
+        <p>Step 2: Select the tool in the APP list and lanuch it</p>
+        <p>Step 3: Set the parameters as needed</p>
+        <p>Step 4: Click the &quot;Assemble&quot; button to check input and generate CMDs </p>
+        <p>Step 5: Click the &quot;Run&quot; button to stat the mission</p>
+        <p><strong>(3). Module usage</strong></p>
+        <p>The basic modules in the directory of &quot;mods&quot; and tool scripts in the directory of &quot;tools&quot; can be used as python modules. </p>
+        <p>Run the &quot;AutoAPIDoc.py&quot; in the directory of &quot;docs&quot; to lanuch  API documentations for every scripts.</p>
+          </li>
+        <li>
+          <h3>Practical examples</h3>
+          <p class="bold">(1). To create mature sequences  for mouse proteins</p>
+          <p><img src="snapshots/examples/e1.png" width="640"></p>
+          <p class="bold">(2). To predict SEPs derived  from circRNA transcripts (via GUI)</p>
+          <p><img src="snapshots/examples/e2.png" width="720" height="1309"></p>
+          <p class="bold">(3).  To generat subsets and retrieving sequences</p>
+          
+          <p><img src="snapshots/examples/e3.png" width="720" height="659"></p>
+          <p class="bold">(4).  To use &quot;fastabase&quot; as module</p>
+          
+          <p>Open &quot;mod_test.py&quot; in the directory of &quot;test&quot;, edit or run in the python shell.</p>
+          <p><img src="snapshots/examples/e4.png" width="720" height="2174"></p>
+        </li>
+      <li>
+        <h3>License</h3>
+          <p>This project follows the GNU General Public License (version: 3.0).</p>
+          <p>See: <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">https://www.gnu.org/licenses/gpl-3.0.en.html</a></p>
+        </li>
+      </ul>
+    <p>&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
