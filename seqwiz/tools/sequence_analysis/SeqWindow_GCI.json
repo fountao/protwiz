@@ -1,0 +1,115 @@
+{
+    "appinfo": {
+        "name": "SeqWindow",
+        "version": "1.0",
+        "description": "Search for sequence window based on position table",
+        "developer": "",
+        "contact": "",
+        "homepage": "",
+        "license": "",
+        "standard": ""
+    },
+    "gcipars": {
+        "cuiapp": "SeqWindow.py",
+        "atqctrl": "False",
+        "cmdctrl": "True",
+        "icon": "",
+        "logo": "logo.png",
+        "splash": "splash.png",
+        "help": "",
+        "wait": "",
+        "fadeio":"True",
+        "transparency":"240",
+        "interpreter":"python",
+        "sptime": "5",
+        "spmaxsz": "[480,240]",
+        "fontsz": "12",
+        "logomaxsz": "[240,120]",
+        "parasz": "[640,360]",
+        "infowidth": "400",
+        "descsz": "[480,60]",
+        "titwrap": "180",
+        "hpwrap": "240",
+        "cmdsz": "[600,72]",
+        "waitsz": "[480,96]"
+    },
+    "cuipars": {
+        "si_1": {
+            "title": "Database file",
+            "type": "file",
+            "style": "single",
+            "flag": "posl",
+            "requirement": "yes",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Database file (absolute path), must be in pre-defined directory of SeqDBs"
+        },
+        "si_2": {
+            "title": "Position table file",
+            "type": "file",
+            "style": "single",
+            "flag": "posl",
+            "requirement": "yes",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "position table file (absolute path), with header:UID<tab>START<tab>END"
+        },
+        "si_3": {
+            "title": "Output dir",
+            "type": "folder",
+            "style": "single",
+            "flag": "-o",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Output dir"
+        },
+        "si_4": {
+            "title": "Label name",
+            "type": "string",
+            "style": "single",
+            "flag": "-l",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Label name for output file"
+        }, 
+        "si_5": {
+            "title": "Upstream sequence length",
+            "type": "int",
+            "style": "",
+            "flag": "--ulen",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "6",
+            "help": "Upstream sequence length"
+        },
+        "si_6": {
+            "title": "Downstream sequence length",
+            "type": "int",
+            "style": "",
+            "flag": "--dlen",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "6",
+            "help": "Downstream sequence length"
+        },
+        "si_7": {
+            "title": "Outlier symbol",
+            "type": "string",
+            "style": "single",
+            "flag": "-s",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "_",
+            "help": "Downstream sequence length"
+        } 
+    }
+}

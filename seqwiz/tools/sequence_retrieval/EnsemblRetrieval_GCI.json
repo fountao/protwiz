@@ -1,0 +1,104 @@
+{
+    "appinfo": {
+        "name": "EnsemblRetrieval",
+        "version": "1.0",
+        "description": "Retrieval of species specific protein sequences and annotations from the Ensembl database",
+        "developer": "",
+        "contact": "",
+        "homepage": "",
+        "license": "",
+        "standard": ""
+    },
+    "gcipars": {
+        "cuiapp": "EnsemblRetrieval.py",
+        "atqctrl": "False",
+        "cmdctrl": "True",
+        "icon": "",
+        "logo": "logo.png",
+        "splash": "splash.png",
+        "help": "",
+        "wait": "",
+        "fadeio":"True",
+        "transparency":"240",
+        "interpreter":"python",
+        "sptime": "5",
+        "spmaxsz": "[480,240]",
+        "fontsz": "12",
+        "logomaxsz": "[240,120]",
+        "parasz": "[640,360]",
+        "infowidth": "400",
+        "descsz": "[480,60]",
+        "titwrap": "180",
+        "hpwrap": "240",
+        "cmdsz": "[600,72]",
+        "waitsz": "[480,96]"
+    },
+    "cuipars": {
+        "si_2": {
+            "title": "Taxonomy ID",
+            "type": "string",
+            "style": "single",
+            "flag": "-t",
+            "requirement": "yes",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Taxonomy ID for a specific species"
+        },
+        "si_3": {
+            "title": "Label for this database",
+            "type": "string",
+            "style": "single",
+            "flag": "-l",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "customize",
+            "help": "Label name for this database"
+        },
+        "si_4": {
+            "title": "Rewrite mode",
+            "type": "check",
+            "style": "",
+            "flag": "--rwrite",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "false",
+            "help": "Rewrite mode"
+        },
+        "si_5": {
+            "title": "Sequence source",
+            "type": "select",
+            "style": "single",
+            "flag": "--source",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "all|abinitio",
+            "default": "all",
+            "help": "To download pep.all or pep.abinitio sequences"
+        },
+        "si_8": {
+            "title": "Create SQPD database",
+            "type": "check",
+            "style": "",
+            "flag": "-s",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "false",
+            "help": "Follow-up action: Create SQPD sequence database using UpConvert"
+        }, 
+        "si_9": {
+            "title": "Sequence properties annotation",
+            "type": "check",
+            "style": "",
+            "flag": "-a",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "false",
+            "help": "Follow-up action: Performing sequence annotation (calculating protein properties) using SeqAnnotate"
+        }
+    }
+}

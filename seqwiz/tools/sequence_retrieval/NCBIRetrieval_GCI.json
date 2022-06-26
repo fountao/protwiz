@@ -1,0 +1,137 @@
+{
+    "appinfo": {
+        "name": "NCBIRetrieval",
+        "version": "1.0",
+        "description": "Retrieval of species specific protein sequences and annotations from the NCBI database",
+        "developer": "",
+        "contact": "",
+        "homepage": "",
+        "license": "",
+        "standard": ""
+    },
+    "gcipars": {
+        "cuiapp": "NCBIRetrieval.py",
+        "atqctrl": "False",
+        "cmdctrl": "True",
+        "icon": "",
+        "logo": "logo.png",
+        "splash": "splash.png",
+        "help": "",
+        "wait": "",
+        "fadeio":"True",
+        "transparency":"240",
+        "interpreter":"python",
+        "sptime": "5",
+        "spmaxsz": "[480,240]",
+        "fontsz": "12",
+        "logomaxsz": "[240,120]",
+        "parasz": "[640,360]",
+        "infowidth": "400",
+        "descsz": "[480,60]",
+        "titwrap": "180",
+        "hpwrap": "240",
+        "cmdsz": "[600,72]",
+        "waitsz": "[480,96]"
+    },
+    "cuipars": {
+        "si_1": {
+            "title": "Email",
+            "type": "string",
+            "style": "single",
+            "flag": "email",
+            "requirement": "yes",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "A email account to avoid blcoking of NCBI server"
+        },
+        "si_2": {
+            "title": "Taxonomy ID",
+            "type": "string",
+            "style": "single",
+            "flag": "-t",
+            "requirement": "yes",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Taxonomy ID for a specific species"
+        },
+        "si_3": {
+            "title": "Label for this database",
+            "type": "string",
+            "style": "single",
+            "flag": "-l",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "customize",
+            "help": "Label name for this database"
+        },
+        "si_4": {
+            "title": "Rewrite mode",
+            "type": "check",
+            "style": "",
+            "flag": "--rwrite",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "false",
+            "help": "Rewrite mode"
+        },
+        "si_5": {
+            "title": "Only RefSeq sequences",
+            "type": "check",
+            "style": "",
+            "flag": "--refseq",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "false",
+            "help": "To search for a reference proteome"
+        },
+        "si_6": {
+            "title": "Manual mode",
+            "type": "check",
+            "style": "",
+            "flag": "--manual",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "false",
+            "help": "To manually download the sequences via local browser"
+        },
+        "si_7": {
+            "title": "Block size",
+            "type": "int",
+            "style": "",
+            "flag": "-b",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "[50,1000]",
+            "default": "100",
+            "help": "Block size for fetching sequences, Default: 100, Range: [50,1000]"
+        },
+        "si_8": {
+            "title": "Create SQPD database",
+            "type": "check",
+            "style": "",
+            "flag": "-s",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "false",
+            "help": "Follow-up action: Create SQPD sequence database using UpConvert"
+        }, 
+        "si_9": {
+            "title": "Sequence properties annotation",
+            "type": "check",
+            "style": "",
+            "flag": "-a",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "false",
+            "help": "Follow-up action: Performing sequence annotation (calculating protein properties) using SeqAnnotate"
+        }
+    }
+}

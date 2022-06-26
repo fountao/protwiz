@@ -1,0 +1,170 @@
+{
+    "appinfo": {
+        "name": "TabFilter",
+        "version": "1.0",
+        "description": "Table filter to generate a set of ID list",
+        "developer": "",
+        "contact": "",
+        "homepage": "",
+        "license": "",
+        "standard": ""
+    },
+    "gcipars": {
+        "cuiapp": "TabFilter.py",
+        "atqctrl": "False",
+        "cmdctrl": "True",
+        "icon": "",
+        "logo": "logo.png",
+        "splash": "splash.png",
+        "help": "",
+        "wait": "",
+        "fadeio":"True",
+        "transparency":"240",
+        "interpreter":"python",
+        "sptime": "5",
+        "spmaxsz": "[480,240]",
+        "fontsz": "12",
+        "logomaxsz": "[240,120]",
+        "parasz": "[640,360]",
+        "infowidth": "400",
+        "descsz": "[480,60]",
+        "titwrap": "180",
+        "hpwrap": "240",
+        "cmdsz": "[600,72]",
+        "waitsz": "[480,96]"
+    },
+    "cuipars": {
+        "si_1": {
+            "title": "Table file",
+            "type": "file",
+            "style": "single",
+            "flag": "posl",
+            "requirement": "yes",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Table file (absolute path), must be in pre-defined directory of SeqDBs"
+        },
+        "si_2": {
+            "title": "Column index for filtering (1-based)",
+            "type": "int",
+            "style": "",
+            "flag": "-c",
+            "requirement": "yes",
+            "exclusive": "yes",
+            "limitation": "",
+            "default": "",
+            "help": "Column index for filtering (1-based)"
+        },
+        "si_3": {
+            "title": "Show table header",
+            "type": "check",
+            "style": "",
+            "flag": "-s",
+            "requirement": "yes",
+            "exclusive": "yes",
+            "limitation": "",
+            "default": "false",
+            "help": "Show table header and first row"
+        },
+        "si_4": {
+            "title": "Output dir",
+            "type": "folder",
+            "style": "single",
+            "flag": "-o",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Output dir"
+        },
+        "si_5": {
+            "title": "Label name",
+            "type": "string",
+            "style": "single",
+            "flag": "-l",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Label name for output file"
+        }, 
+        "si_6": {
+            "title": "Uinique ID index (1-based)",
+            "type": "int",
+            "style": "single",
+            "flag": "-u",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "1",
+            "help": "Uinique ID index (1-based)"
+        },
+        "si_7": {
+            "title": "Expression condition for filtering",
+            "type": "string",
+            "style": "single",
+            "flag": "-e",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Expression string/condition for filtering"
+        },
+        "si_8": {
+            "title": "Condition type",
+            "type": "select",
+            "style": "single",
+            "flag": "-t",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "exact|pattern|numeric",
+            "default": "",
+            "help": "Parse rule for fasta/peff file"
+        },
+        "si_9": {
+            "title": "Template class for numerical condition",
+            "type": "select",
+            "style": "single",
+            "flag": "-n",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "(min,max)|[min,max]|(min,max]|[min,max)|<=max|>=min|<max|>min|!=val|=val",
+            "default": "",
+            "help": "Template class for numerical condition"
+        },
+        "si_10": {
+            "title": "Filter mode",
+            "type": "select",
+            "style": "single",
+            "flag": "-m",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "select|remove",
+            "default": "select",
+            "help": "Filter mode [default: select]"
+        },
+        "si_11": {
+            "title": "Reference set file",
+            "type": "file",
+            "style": "single",
+            "flag": "-r",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Reference entries list for multiple selection"
+        },
+        "si_12": {
+            "title": "Integration mode",
+            "type": "select",
+            "style": "single",
+            "flag": "-i",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "union|intersection|complement",
+            "default": "",
+            "help": "Integration mode for multiple selection, based on reference set"
+        }
+    }
+}

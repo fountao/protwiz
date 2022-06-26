@@ -1,0 +1,60 @@
+{
+    "appinfo": {
+        "name": "NCBISpecies",
+        "version": "1.0",
+        "description": "Speies ID search based on NCBI taxomomy",
+        "developer": "",
+        "contact": "",
+        "homepage": "",
+        "license": "",
+        "standard": ""
+    },
+    "gcipars": {
+        "cuiapp": "NCBISpecies.py",
+        "atqctrl": "False",
+        "cmdctrl": "True",
+        "icon": "",
+        "logo": "logo.png",
+        "splash": "splash.png",
+        "help": "",
+        "wait": "",
+        "fadeio":"True",
+        "transparency":"240",
+        "interpreter":"python",
+        "sptime": "5",
+        "spmaxsz": "[480,240]",
+        "fontsz": "12",
+        "logomaxsz": "[240,120]",
+        "parasz": "[640,360]",
+        "infowidth": "400",
+        "descsz": "[480,60]",
+        "titwrap": "180",
+        "hpwrap": "240",
+        "cmdsz": "[600,72]",
+        "waitsz": "[480,96]"
+    },
+    "cuipars": {
+        "si_1": {
+            "title": "Email",
+            "type": "string",
+            "style": "single",
+            "flag": "email",
+            "requirement": "no",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "A Email address to avoid blocking of NCBI server"
+        },
+        "si_2": {
+            "title": "Search keyword",
+            "type": "string",
+            "style": "single",
+            "flag": "-s",
+            "requirement": "yes",
+            "exclusive": "no",
+            "limitation": "",
+            "default": "",
+            "help": "Keyword for search action"
+        }
+    }
+}
