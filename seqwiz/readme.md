@@ -5,7 +5,7 @@ SeqWiz: a modularized toolkit for next-generation protein sequence database mana
 *   ### Homepage
     Visit our homepage for more information:
     
-    [http://www.websdoor.net/goto/seqwiz](http://www.websdoor.net/goto/seqwiz)
+    [https://www.websdoor.net/goto/seqwiz](https://www.websdoor.net/goto/seqwiz)
     
 *   ### License
     
