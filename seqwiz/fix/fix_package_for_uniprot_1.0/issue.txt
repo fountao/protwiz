@@ -1,5 +1,5 @@
 >released on Wednesday, June 29, 2022
-As UniProt switchs to new UI and API, the old API URLs are retired.
+As UniProt switches to new UI and API, the old API URLs are retired.
 This package is to fix the API URLs for SeqWiz version 1.0.
 
 >Usage: 
